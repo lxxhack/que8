@@ -10,8 +10,8 @@ module.exports = function main(input) {
     var num8=[0,1,0,2,1,2,2,1,2];
     var num9=[0,1,0,2,1,2,0,0,2];
     var num=[num0,num1,num2,num3,num4,num5,num6,num7,num8,num9];
-    num.push.apply(num,num0);
     var digit=input.toString();
+    var ret="";
     for (var k=0;k<3;k++)
     {
         for (var i=0;i<digit.length;i++)
@@ -20,15 +20,16 @@ module.exports = function main(input) {
             {
                 switch(num[parseInt(digit.charAt(i))][k*3+j])
                 {
-                    case 0:console.log('.');
+                    case 0:ret+='.';
                         break;
-                    case 1:console.log('_');
+                    case 1:ret+='_';
                         break;
-                    case 2:consoe.log('|');
+                    case 2:ret+='|';
                         break;
                 }
             }
         }
-        console.log('\n');
+        ret+='\n';
    }
+   return ret;
 };
