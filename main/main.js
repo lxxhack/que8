@@ -28,6 +28,8 @@ module.exports = function main(input) {
                         break;
                 }
             }
+            if (i<digit.length–1)
+                ret+=' ';
         }
         ret+='\n';
    }
