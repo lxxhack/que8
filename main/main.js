@@ -28,7 +28,7 @@ module.exports = function main(input) {
                         break;
                 }
             }
-            //if (i<digit.length–1)
+            if (i<digit.length-1)
                 ret+=' ';
         }
         ret+='\n';
